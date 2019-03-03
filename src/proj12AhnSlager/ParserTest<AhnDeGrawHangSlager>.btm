@@ -1,0 +1,85 @@
+class ParserTest{
+    int x = 5;
+    int y = 7;
+    int z = 100;
+    int[] array = new int[3];
+    boolean variable1 = true;
+    boolean variable2 = false;
+
+    void incrementX(){
+        x++;
+    }
+
+    int getX(){
+        return x;
+    }
+
+    void incrementY(){
+        if(variable1 && variable2){
+            y ++;
+        }
+        else{
+            y--;
+        }
+    }
+
+    void tryForLoop(){
+        for(i = 0; i < 3; i++){
+            y++;
+            x--;
+            z--;
+        }
+    }
+
+    void tryWhileLoop(){
+        while( y <= z){
+            y++;
+        }
+    }
+
+    void tryOrStmt(){
+        if(y<x || variable2){
+            z--;
+        }
+    }
+
+    boolean getOpposite(){
+        variable1 = !variable1;
+        return variable1;
+    }
+
+    void assignZ(){
+        z = 20;
+
+    }
+
+    void multiply(){
+        x = z*y;
+    }
+
+    int divide(){
+        var w = 9/3;
+        return w;
+    }
+
+    int modulus(){
+        var a = 24 % 3;
+        return a;
+    }
+
+    boolean lessThan(){
+        return x < y;
+    }
+
+    boolean greaterThan(){
+        return x > y;
+    }
+
+    boolean lessThanEq(){
+        return x <= y;
+    }
+
+    boolean greaterThanEq(){
+        return x >= y;
+    }
+}

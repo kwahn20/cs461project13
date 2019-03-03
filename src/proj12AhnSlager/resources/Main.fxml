@@ -1,0 +1,119 @@
+<!--
+ * File: Main.fxml
+ * Names: Kevin Ahn, Lucas DeGraw, Jackie Hang, Kyle Slager
+ * Class: CS 361
+ * Project 6
+ * Date: October 26, 2018
+
+ * Edited From: Zena Abulhab, Paige Hanssen, Kyle Slager, Kevin Zhou
+ * Project 5
+ * Date: October 12, 2018
+ *
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.VBox?>
+<?import proj12AhnSlager.Console?>
+<?import javafx.scene.control.SplitPane?>
+
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TreeView?>
+<?import proj12AhnSlager.JavaTabPane?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="800.0"
+      prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.1"
+      fx:controller="proj12AhnSlager.MasterController"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:id="vBox"
+      stylesheets="@Main.css">
+    <MenuBar>
+
+        <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+            <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="About..."/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleNew" text="New" accelerator="Shortcut+N"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleOpen" text="Open..." accelerator="Shortcut+O"/>
+            <MenuItem mnemonicParsing="false" fx:id="closeMenuItem" onAction="#handleClose"
+                      text="Close" disable="true" accelerator="Shortcut+W"/>
+            <MenuItem mnemonicParsing="false" fx:id="saveMenuItem" onAction="#handleSave" text="Save" disable="true"
+                      accelerator="Shortcut+S"/>
+            <MenuItem mnemonicParsing="false" fx:id="saveAsMenuItem" onAction="#handleSaveAs"
+                      text="Save As..." disable="true" accelerator="Shortcut+Shift+S"/>
+            <SeparatorMenuItem mnemonicParsing="false"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Exit" accelerator="Shortcut+Q"/>
+
+        </Menu>
+        <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+            <MenuItem mnemonicParsing="false" onAction="#handleUndo" text="Undo" accelerator="Shortcut+Z"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleRedo" text="Redo" accelerator="Shortcut+Shift+Z"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleCut" text="Cut" accelerator="Shortcut+X"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleCopy" text="Copy" accelerator="Shortcut+C"/>
+            <MenuItem mnemonicParsing="false" onAction="#handlePaste"
+                      text="Paste" accelerator="Shortcut+V"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleCommenting" text="Comment/Uncomment"
+                      accelerator="Shortcut+/"/>
+            <MenuItem fx:id="findAndReplaceMenuItem" onAction="#handleFindAndReplace"
+                      text="Find and Replace" accelerator="Shortcut+L"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleTabbing" text="Tab" accelerator="Shortcut+]"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleUnTabbing" text="Un-Tab" accelerator="Shortcut+["/>
+            <MenuItem mnemonicParsing="false" onAction="#handleSelectAll"
+                      text="Select All" accelerator="Shortcut+A"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleMatchBracketOrParen" text="Match Bracket/Parenthesis"
+                      accelerator="Shortcut+M"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleFocusOnFindTextEntry" text="Go To Find"
+                      accelerator="Shortcut+F"/>
+            <MenuItem mnemonicParsing="false" onAction="#handleFocusOnReplaceTextEntry" text="Go To Replace"
+                      accelerator="Shortcut+R"/>
+
+        </Menu>
+        <Menu fx:id="prefMenu" mnemonicParsing="false" text="Preferences">
+            <MenuItem fx:id="normalModeMenuItem" mnemonicParsing="false" onAction="#handleNormalMode"
+                      text="Normal Mode" disable="true"/>
+            <MenuItem fx:id="darkModeMenuItem" mnemonicParsing="false" onAction="#handleDarkMode" text="Dark Mode"/>
+            <MenuItem fx:id="funModeMenuItem" mnemonicParsing="false" onAction="#handleFunMode" text="Fun Mode"/>
+            <MenuItem fx:id="hallowThemeItem" mnemonicParsing="false" onAction="#handleHallowThemeMode"
+                      text="HallowTheme"/>
+        </Menu>
+        <Menu mnemonicParsing="false" text = "Help">
+            <MenuItem mnemonicParsing="false" onAction="#handleOpenJavaTutorial" text = "Java Tutorial"/>
+        </Menu>
+
+    </MenuBar>
+
+    <ToolBar>
+        <Button fx:id="scanButton" onAction="#handleScan" text="Scan"/>
+        <Button fx:id="scanAndParseButton" onAction="#handleScanAndParse" text="Scan And Parse"/>
+        <TextField fx:id="findTextEntry" promptText="Find"/>
+        <Button fx:id="findButton" onAction="#handleFindText" text="Find"/>
+        <Button fx:id="findPrevBtn" onAction="#handleHighlightPrevMatch" text="Previous"/>
+        <Button fx:id="findNextBtn" onAction="#handleHighlightNextMatch" text="Next"/>
+        <TextField fx:id="replaceTextEntry" promptText="Replace"/>
+        <Button fx:id="replaceBtn" onAction="#handleReplaceText" text="Replace"/>
+    </ToolBar>
+
+    <ToolBar>
+        <!--<Button fx:id="checkMainBtn" onAction="#handleMainCheck" text="Check Main"/>-->
+        <!--<Button fx:id="checkStringBtn" onAction="#handleStrConstCheck" text="Check String Constants"/>-->
+        <!--<Button fx:id="checkLocalVarBtn" onAction="#handleNumLocVarCheck" text="Check # Local Variables"/>-->
+        <Button fx:id="scanParseAndCheckBtn" onAction="#handleScanParseAndCheck" text="Scan Parse and Check"/>
+    </ToolBar>
+
+        <SplitPane orientation="VERTICAL" focusTraversable="true" VBox.vgrow="ALWAYS">
+            <items>
+                <JavaTabPane fx:id="javaTabPane" prefHeight="392.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                </JavaTabPane>
+
+                <Console fx:id="console" prefHeight="100.0" prefWidth="1200.0" VBox.vgrow="ALWAYS">
+                </Console>
+            </items>
+        </SplitPane>
+
+
+</VBox>

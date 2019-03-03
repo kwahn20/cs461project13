@@ -1,0 +1,124 @@
+/**
+ * File: DarkMode.css
+ * Names: Kevin Ahn, Lucas DeGraw, Jackie Hang, Kyle Slager
+ * Class: CS 361
+ * Project 6
+ * Date: October 26, 2018
+ */
+
+#vBox{
+    -fx-background-color: #404040;
+}
+#compileButton {
+    -fx-font: 13 arial;
+    -fx-base: #3399ff;
+    -fx-background-radius: 100;
+}
+
+#compileRunButton {
+    -fx-font: 13 arial;
+    -fx-base: #00ff80;
+    -fx-background-radius: 100;
+}
+
+#scanButton {
+    -fx-font: 13 arial;
+    -fx-base: #00ff80;
+    -fx-background-radius: 100;
+}
+
+#stopButton {
+    -fx-font: 13 arial;
+    -fx-base: red;
+    -fx-background-radius: 100;
+}
+
+#tabPane {
+    -pref-height: 200px;
+    -pref-width: 200px;
+}
+
+#console{
+     -fx-background-color: #404040;
+}
+
+.menu-item{
+    -fx-background-color: #737373;
+}
+
+.menu-bar{
+    -fx-background-color: #666666;
+}
+
+.tab-pane{
+    -fx-background-color: #737373;
+}
+
+.tab{
+    -fx-background-color: #666666;
+}
+
+.code-area{
+    -fx-background-color: #404040;
+}
+
+.tool-bar{
+    -fx-background-color:#8c8c8c;
+}
+.text{
+    -fx-fill: white;
+}
+
+
+.keyword {
+    -fx-fill: #ff9900;
+}
+.semicolon {
+    -fx-fill: #ff9900;
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: #00b300;
+}
+
+.comment {
+    -fx-fill: #bfbfbf;
+}
+
+.intconst {
+    -fx-fill: #008ae6;
+}
+.err {
+    -fx-fill: red;
+}
+
+.inp {
+    -fx-fill: lightblue;
+}
+
+.cons {
+    -fx-fill: lightgreen;
+}
+
+.normal{
+    -fx-fill: white;
+}
+.paragraph-box:has-caret {
+    -fx-background-color: #595959;
+}
+
+.lineno{
+    -fx-background-color: #262626;
+}

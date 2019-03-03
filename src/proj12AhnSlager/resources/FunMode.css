@@ -1,0 +1,112 @@
+/**
+ * File: DarkMode.css
+ * Names: Kevin Ahn, Lucas DeGraw, Jackie Hang, Kyle Slager
+ * Class: CS 361
+ * Project 6
+ * Date: October 28, 2018
+ */
+
+#vBox{
+    -fx-background-color: #404040;
+}
+
+#compileButton {
+    -fx-font: 13 arial;
+    -fx-base: #3399ff;
+    -fx-background-radius: 100;
+}
+
+#scanButton {
+    -fx-font: 13 arial;
+    -fx-base: #3399ff;
+    -fx-background-radius: 100;
+}
+
+#compileRunButton {
+    -fx-font: 13 arial;
+    -fx-base: #00ff80;
+    -fx-background-radius: 100;
+}
+
+#stopButton {
+    -fx-font: 13 arial;
+    -fx-base: red;
+    -fx-background-radius: 100;
+}
+
+#tabPane {
+    -pref-height: 200px;
+    -pref-width: 200px;
+    -fx-background-image: url(rainbowCopy.jpg)
+}
+
+.button{
+    -fx-base: #ffcc00;
+}
+
+#console{
+    -fx-background-image: url(rainbow.jpg)
+}
+
+.menu-item{
+    -fx-background-color: #ff6666;
+}
+
+.menu-bar{
+    -fx-background-color: #ff944d;
+}
+
+.tab{
+     -fx-background-color: #ff5050;
+}
+
+.code-area{
+     -fx-background-image: url(rainbowStripes.png)
+}
+
+.tool-bar{
+    -fx-background-color:#99ccff;
+}
+
+.text{
+    -fx-fill: white;
+
+}
+
+.keyword {
+    -fx-fill: #660066;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: #ffcc00;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: #ffcc00;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: #ffcc00;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: #00ffff;
+}
+
+.comment {
+    -fx-fill: cadetblue;
+}
+
+.intconst {
+    -fx-fill: #ff4d4d;
+}
+.paragraph-box:has-caret {
+    -fx-background-color: #3399ff;
+}
+
+.lineno{
+    -fx-background-color: #3399ff;
+}

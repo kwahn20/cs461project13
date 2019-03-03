@@ -1,0 +1,87 @@
+/**
+ * File: Main.css
+ * Names: Kevin Ahn, Lucas DeGraw, Jackie Hang, Kyle Slager
+ * Class: CS 361
+ * Project 6
+ * Date: October 26, 2018
+ * ---------------------------
+ * Names: Zena Abulhab, Paige Hanssen, Kyle Slager Kevin Zhou
+ * Project 5
+ * Date: October 12, 2018
+ */
+
+
+
+#scanButton {
+    -fx-font: 13 arial;
+    -fx-base: lightblue;
+    -fx-background-radius: 100;
+}
+
+#scanAndParseButton {
+    -fx-font: 13 arial;
+    -fx-base: lightgreen;
+    -fx-background-radius: 100;
+}
+
+#tabPane {
+    -pref-height: 200px;
+    -pref-width: 200px;
+}
+
+.keyword {
+    -fx-fill: purple;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: blue;
+}
+
+.comment {
+    -fx-fill: cadetblue;
+}
+
+.intconst {
+    -fx-fill: firebrick;
+}
+
+.err {
+    -fx-fill: red;
+}
+
+.inp {
+    -fx-fill: blue;
+}
+
+.cons {
+    -fx-fill: green;
+}
+
+.normal{
+    -fx-fill: black;
+}
+.paragraph-box:has-caret {
+    -fx-background-color: #f2f9fc;
+}
+
+/* style of context menu */
+.contextMenu {
+    -fx-text-base-color: black;
+}
+
+

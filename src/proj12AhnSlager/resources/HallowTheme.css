@@ -1,0 +1,113 @@
+/**
+ * File: DarkMode.css
+ * Names: Matt Jones, Kevin Zhou, Kevin Ahn, Jackie Hang
+ * Class: CS 361
+ * Project 4
+ * Date: October 2, 2018
+ */
+
+#vBox{
+    -fx-background-color: #404040;
+}
+#compileButton {
+    -fx-font: 13 arial;
+    -fx-base: #3399ff;
+    -fx-background-radius: 100;
+}
+
+#scanButton {
+    -fx-font: 13 arial;
+    -fx-base: #3399ff;
+    -fx-background-radius: 100;
+}
+
+#compileRunButton {
+    -fx-font: 13 arial;
+    -fx-base: #00ff80;
+    -fx-background-radius: 100;
+}
+
+#stopButton {
+    -fx-font: 13 arial;
+    -fx-base: red;
+    -fx-background-radius: 100;
+}
+
+#tabPane {
+    -pref-height: 200px;
+    -pref-width: 200px;
+}
+
+#console{
+     -fx-background-color: #247D03;
+}
+
+.menu-item{
+    -fx-background-color: #57534E;
+}
+
+.menu-bar{
+    -fx-background-color: #57534E;
+}
+
+.tab-pane{
+    -fx-background-image: url(pumpkin.jpg)
+}
+
+.tab{
+    -fx-background-color: #DF7802;
+}
+
+.code-area{
+    -fx-background-color: #DF7802;
+}
+
+.tool-bar{
+    -fx-background-color:#247D03;
+}
+.text{
+    -fx-fill: white;
+}
+
+
+.keyword {
+    -fx-fill: #9966ff;
+    -fx-font-weight: bold;
+}
+.semicolon {
+    -fx-font-weight: bold;
+}
+.paren {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.bracket {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.brace {
+    -fx-fill: teal;
+    -fx-font-weight: bold;
+}
+.string {
+    -fx-fill: #008ae6;
+}
+
+.comment {
+    -fx-fill: cadetblue;
+}
+
+.intconst {
+    -fx-fill: #037D44;
+}
+.paragraph-box:has-caret {
+    -fx-background-color: #595959;
+}
+
+.lineno{
+    -fx-background-color: #262626;
+}
+
+#errorLine{
+    -fx-fill: red;
+}
